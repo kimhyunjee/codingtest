@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function solution(absolutes, signs) {
+        let answer = 0;  // 0으로 초기화
+        for (let i=0; i< absolutes.length; i++ ) { // i가 0부터 받은 a값의길이까지만 돌아감
+            if (signs[i] === true ) { // s배열이 true 값이면 양수니까 더해주고
+                answer = answer += absolutes[i] ;
+            } else { // s배열이 true 값이면 음수니까 빼준다
+                answer = answer -= absolutes[i];
+            }
+        }
+        return answer;
+    }
+        let absolutes = [1,2,3,4];
+        let signs = [true,false,true,true];
+        console.log(solution(absolutes, signs));
+
+    </script>
+
+
+</body>
+</html>
