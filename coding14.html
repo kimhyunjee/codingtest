@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function solution(arr, divisor) {
+            var answer = [];
+
+            for (let i=0; i<arr.length; i++) { //받은 arr배열을 끝까지 돌린다. 뭘로?아래참고
+                if (arr[i] % divisor == 0) { // 0번째부터끝까지 divisor로 나눈다. 나눈 값이 0이면
+                    answer.push(arr[i]) // 0인 값들만 새로 배열을 추가한다
+                }
+            }
+            return answer.length == 0? [-1] : (answer.sort((a,b) => (a-b))); 
+            //이거 좀 뿌듯 - 0이 맞으면 answer.sort를 출력, 아니면 -1 출력
+        }
+        
+        console.log(solution([1,6,30,8,10,20,5], 5));
+
+
+    </script>
+</body>
+</html>
