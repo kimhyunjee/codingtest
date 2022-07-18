@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function solution(price, money, count) {
+            let totalPrice = 0;
+            
+            for(let i=0;i<=count;i++){ //0부터 count만큼 돌림
+                totalPrice += price * i; // 0+ 2+4+6+8 만큼 더해짐
+            }
+            
+            return money > totalPrice ? 0 : totalPrice-money //갖고있는돈이 토탈금액보다 크면 true면 0 
+                                                            //ralse면 토탈에서 갖고있는 금액 뺀거 출력
+        }
+
+        //console.log(solution(2,5,4)); 확인용 / 15로 정상출력됨
+
+
+
+    </script>
+
+</body>
+</html>
