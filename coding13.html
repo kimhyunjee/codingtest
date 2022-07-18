@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function solution(a,b){ 
+            let day = new Date(2016, a-1, b);  // 1월이 0으로 들어가니, 각 입력받은 월에 -1씩 해준다
+            let week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+
+            let dayWeek = week[day.getDay()]; //getDay() 메소드는 날짜 문자열을 Date 객체로 만들어서 
+                                                       //Date 객체의 날짜가 무슨 요일인지 숫자 값으로 반환
+            return dayWeek;
+
+            }
+
+            //console.log(solution(1,2));
+
+    </script>
+
+</body>
+</html>
