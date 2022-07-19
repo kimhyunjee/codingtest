@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function solution(s) {
+            var answer = '';
+
+            //짝수와 홀수인 경우- 짝수면 가운데2글자가 나오고 홀수면 가운데 1글자
+            if (s.length % 2 == 0 ) { // 짝수일 경우, 문자열의 길이를 2로 나누어 해당 인덱스의 이전 값과 해당 인덱스 값을 출력
+                answer = s[s.length / 2 - 1] + s[s.length / 2];
+            } else {
+                answer = s[Math.floor(s.length/2)]; // 홀수일 경우, 문자열의 길이가 홀수일 때 2로 나누면 나눈 값은 소숫점이 될 것이다. 그러므로 나눈 값에 Math.floor()메서드를 사용해 반내림 - 반내림 이유 (인덱스는 0부터 시작하기 때문)
+            }
+            return answer;
+        }
+
+        //console.log(solution("qwertyuio"));  확인용 
+    
+
+    </script>
+    
+</body>
+</html>
