@@ -1,56 +1,13 @@
-import java.util.Scanner;
 
-public class Main {
-	public static void main(String[] args) {
-      Scanner sc = new Scanner(System.in);
-      int n = sc.nextInt(); // 1. n을 입력 받기
-      sc.close();
-      
-      for (int i = 1; i <= n; i++) { // 2. 1부터 i를 1씩 증가하며 반복하기
-          for (int j = 1; j <= i; j++) { // 3.  i의 갯수 만큼
-								System.out.print("*"); //         별 출력하기
-					}
-          if (i != n) { // 5. n이라면 줄바꾸지 않기
-             System.out.println(); // 4. 줄바꾸기
-	        }
-      }
-	}
-}
 
-let fs = require('fs');
-let n = fs.readFileSync('/dev/stdin').toString().split(' ');
-// 1. n을 입력 받기 (입력받는 형식은 외우지않아도 됩니다!)
-
-let num = Number(n);
-
-result = ''; //결과값을 문자열에 저장
-
-for (let i = 0; i <= num; i++) {// 2. 1부터 i를 1씩 증가하며 반복하기
-  for (let j = 0; j <= i; j++) { // 3.  i의 갯수 만큼
-    result += '*';//별 출력하기
+function solution(s) {
+  if (s.length !== 4 && s.length !== 6) return false; //먼저 길이가 4나6이 아니면 false반환 
+  //&&논리곱 : 왼쪽거랑 오른쪽거 둘다 true여야 true반환
+  for (let i = 0; i < s.length; i++) {
+      if (isNaN((s[i]))==true) {
+          return false;} //inNAN(isNotANumber로, 숫자가아니면true 숫자면false)
+      else {
+          return true;}
   }
-	if(i!=n){// 5. n이라면 줄바꾸지 않기
-	  result += '\n';// 4. 줄바꾸기
-	}
 }
-
-console.log(result);//결과 문자열 출력
-
-//9조 영건님 풀이
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	@@ -15,15 +34,28 @@
-            let result = "";
-            for (let i = 0; i < m; i++) {
-                for (let j = 0; j < n; j++) {
-                    result += "*";                 
-                }
-                result += "\n";               
-            }
-            return result;
-        }
-        console.log(solution(5, 3));
-    </script>
-</body>
-</html>
+console.log(solution("eee666")); //근데 이거실패(js에서는 숫자에 e가 붙으면 지수로 인식하여 문자인 경우도 그냥 숫자로 인식)
