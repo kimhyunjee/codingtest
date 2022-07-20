@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function solution(num) {
+        answer = 0;
+        for (let i=0; i<500; i++ ) {
+            if (num !=1 ) { //1이 아닌경우 
+            num = num % 2 == 0 ? num/2 : num*3 +1 ; // num이 짝수면 /2 홀수면 *3+1
+        }  else { //1인경우
+            return answer = i; //현재 횟수 출력
+        } 
+        }
+        return answer = -1; //500번 실행했는데 리턴값이 없을 때
+    }
+    console.log(solution(10));
+
+        
+
+    </script>
+</body>
+</html>
