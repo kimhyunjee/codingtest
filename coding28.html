@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function solution(x) {
+            let y = 0;
+            let ylist = String(x).split('');  //받은 숫자를 문자열로 한개의 숫자씩 자른다
+            // console.log(ylist);  ['1','0']
+            
+            for ( let i=0; i<ylist.length; i++ ) { //잘린만큼 돌면서 하나씩 0에 더해준다
+                y += Number(ylist[i]); //y가 아니라 ylist
+                //console.log(y); //여기서 왜 NAN뜨지?? 형변환이 안된건가
+            
+            }
+            return  (x%y == 0) ? true : false ; //더해준 값으로 처음 받은 x를 나눈게 딱맞으면 true
+            
+        }
+
+        console.log(solution(10)); //어떤 수를 넣어도 false가 뜸..
+
+    </script>
+    
+</body>
+</html>
